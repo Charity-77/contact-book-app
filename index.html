@@ -12,7 +12,8 @@
     <button id="addContact" type="button"> Add Contacts</button>
     <script src="config.js"></script>
     <script>
-        function fetchContact() {
+        document.getElementById("refresh").addEventListener('click', fetchContacts)
+        function fetchContacts() {
             fetch(rootPath + "controller/get-contacts/")
                 .then(function (response) {
                     return response.json();
